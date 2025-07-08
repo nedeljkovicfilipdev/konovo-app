@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 const styles = {
   card: {
     border: '1px solid #ddd',
@@ -46,11 +48,12 @@ const styles = {
 
 const ProductCard = ({ product }) => {
   return (
-    <div style={styles.card}>
-      <img
-        src={product.imgsrc}
-        alt={product.naziv}
-        style={styles.image}
+    <Link to={`/products/${product.sif_product}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <div style={styles.card}>
+        <img
+          src={product.imgsrc}
+          alt={product.naziv}
+          style={styles.image}
       />
 
       <div style={styles.content}>
@@ -63,7 +66,8 @@ const ProductCard = ({ product }) => {
           Cena: {product.price.toFixed(2)} RSD (sa PDV-om)
         </p>
       </div>
-    </div>
+      </div>
+    </Link>
   );
 };
 
