@@ -4,15 +4,16 @@ This is a Konovo Backend + Frontend Application
 
 ```bash
 git clone https://github.com/nedeljkovicfilipdev/konovo-app.git
-cd konovo-app/backend
 
 # Backend
 
-Backend je zamišljen kao **posrednik između frontend aplikacije i eksternog API-ja**, i sadrži jednostavan sistem za autentikaciju i prikaz podataka (npr. proizvoda).
+Backend je zamišljen kao **posrednik između frontend aplikacije i eksternog API-ja**, i sadrži jednostavan sistem za autentikaciju i prikaz podataka.
 
 ---
 
 ## Pokretanje projekta
+
+cd konovo-app/backend
 
 Linux / macOS:
 
@@ -30,7 +31,10 @@ uvicorn main:app --reload
 
 #Frontend
 
+Frontend sadrži jednostavan sistem radi prikazivanja proizvoda bez korišćenja biblioteke za upravljanje stanja Redux
+
 ## Pokretanje projekta
 
+cd konovo-app/frontend
 npm i
 npm run dev
